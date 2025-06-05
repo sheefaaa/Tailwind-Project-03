@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C4U Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/2e5107f23f.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+<!-- Navbar -->
+<header class="w-full shadow-md">
+  <div class="flex items-center justify-between px-6 py-4 max-w-screen-xl mx-auto">
+    <!-- Logo -->
+    <img src="images/logo.png" alt="Logo" class="h-8" />
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="#" class="hover:text-red-500">Home</a>
+      <a href="#" class="text-red-600">About Us</a>
+      <a href="#" class="hover:text-red-500">Upskill</a>
+      <a href="#" class="hover:text-red-500">Contact us</a>
+      
+    </nav>
+
+    <!-- Desktop Button -->
+     <div class="hidden md:flex items-center gap-4">
+        <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 text-sm">Register Interest</button>
+     </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="text-xl md:hidden">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Nav Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+    <nav class="flex flex-col gap-4 text-sm font-medium">
+      <a href="#" class="hover:text-red-500">Home</a>
+      <a href="#" class="text-red-600">About Us</a>
+      <a href="#" class="hover:text-red-500">Upskill</a>
+      <a href="#" class="hover:text-red-500">Contact us</a>
+      <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 text-sm w-fit">Register Interest</button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+
+
+
+  </body>
+</html>
