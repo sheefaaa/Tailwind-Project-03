@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C4U Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/2e5107f23f.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+<!-- Navbar -->
+<header class="w-full shadow-md">
+  <div class="flex items-center justify-between px-6 py-4 max-w-screen-xl mx-auto">
+    <!-- Logo -->
+    <img src="images/logo.png" alt="Logo" class="h-8" />
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="#" class="hover:text-red-500">Home</a>
+      <a href="#" class="text-red-600">About Us</a>
+      <a href="#" class="hover:text-red-500">Upskill</a>
+      <a href="#" class="hover:text-red-500">Contact us</a>
+      
+    </nav>
+
+    <!-- Desktop Button -->
+     <div class="hidden md:flex items-center gap-4">
+        <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 text-sm">Register Interest</button>
+     </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="text-xl md:hidden">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Nav Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+    <nav class="flex flex-col gap-4 text-sm font-medium">
+      <a href="#" class="hover:text-red-500">Home</a>
+      <a href="#" class="text-red-600">About Us</a>
+      <a href="#" class="hover:text-red-500">Upskill</a>
+      <a href="#" class="hover:text-red-500">Contact us</a>
+      <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 text-sm w-fit">Register Interest</button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+<!-- Hero Section -->
+<section class="relative w-full h-[90vh] overflow-hidden bg-red-500 text-white">
+  <!-- Background Image -->
+  <img src="images/hero.png" alt="Hero" class="absolute inset-0 w-full h-full object-cover opacity-100 z-0" />
+
+  <!-- Overlay Text -->
+  <div class="relative z-10 flex flex-col justify-center items-center text-center h-full px-4">
+    <p class="uppercase text-sm tracking-wide text-gray-200">Discover • Interact • Engage</p>
+    
+    <h1 class="text-3xl md:text-5xl font-bold mt-4 leading-tight">
+      Connecting <span class="text-red-500">talent</span> to <br class="hidden md:block" />
+      opportunity through <span class="text-red-500">skills</span>
+    </h1>
+    
+    <p class="mt-4 max-w-xl text-sm md:text-base text-gray-200">
+      We foster a skill-focussed environment enabling students to navigate their career with their self-paced learning journey and businesses to gain market-ready talent.
+    </p>
+    
+    <button class="mt-6 px-6 py-3 bg-red-500 text-white rounded-full hover:bg-red-600 text-sm shadow-lg">
+      Ask questions
+    </button>
+  </div>
+
+  <!-- Curved bottom border -->
+  <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+    <svg class="relative block w-[calc(100%+1.3px)] h-[100px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 100" preserveAspectRatio="none">
+      <path d="M0,0 C960,100 960,100 1920,0 L1920,100 L0,100 Z" fill="#ffffff"></path>
+    </svg>
+  </div>
+</section>
+
+
+<!-- Empower Section -->
+<section class=" py-16 px-6 md:px-12 text-center">
+
+       <!-- Section Title -->
+  <h2 class="text-2xl md:text-3xl font-semibold mb-10">
+    At <span class="text-red-500 font-bold underline">C4U</span>, <br class="md:hidden" />
+    We Empower:
+  </h2>
+
+  
+  <!-- 3 Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    <!-- Card 1: Students -->
+    <div class="bg-[#1C1C32] text-white rounded-xl shadow-lg p-6 text-left">
+      <div class="text-red-400 text-3xl mb-4">
+        <i class="fas fa-user-graduate"></i>
+      </div>
+      <h3 class="text-lg font-semibold mb-2">Students</h3>
+      <p class="text-sm leading-relaxed">
+        We help students find their way in a fast-evolving world by creating a personalised learning journey — guaranteed to help them stand out in a crowded job market.
+      </p>
+    </div>
+
+    <!-- Card 2: Universities -->
+    <div class="bg-[#1C1C32] text-white rounded-xl shadow-lg p-6 text-left">
+      <div class="text-red-400 text-3xl mb-4">
+        <i class="fas fa-university"></i>
+      </div>
+      <h3 class="text-lg font-semibold mb-2">Universities</h3>
+      <p class="text-sm leading-relaxed">
+        We help your emerging talent to unlock their full potential by combining education and work experience to create future-ready employees.
+      </p>
+    </div>
+
+    <!-- Card 3: Businesses -->
+    <div class="bg-[#1C1C32] text-white rounded-xl shadow-lg p-6 text-left">
+      <div class="text-red-400 text-3xl mb-4">
+        <i class="fas fa-briefcase"></i>
+      </div>
+      <h3 class="text-lg font-semibold mb-2">Businesses</h3>
+      <p class="text-sm leading-relaxed">
+        We enable businesses to tap into the untapped power of emerging talent. To co-create the future workforce and revitalise the business world.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="flex flex-col md:flex-row justify-evenly items-center px-4 md:px-0">
+
+  <div class="space-y-20 w-full md:w-auto">
+    <div class="items-start p-4 space-y-5">
+      <p class="text-base text-red-500">About Us</p>
+      <h3 class="text-4xl font-semibold">Our Mission</h3>
+      <p class="text-xl max-w-full md:w-[500px]">
+        To create a personalised pathway for continuous learning and transferable skills development.
+      </p>
+      <a href="#" class="inline-block border border-red-500 text-red-500 px-4 py-2 rounded-full text-lg hover:bg-red-500 hover:text-white transition">
+        Find out more →
+      </a>
+    </div>
+    <div class="items-end px-4">
+      <img src="images/img1.png" alt="" class="w-full md:w-auto">
+    </div>
+  </div>
+
+  <div class="hidden md:block">
+    <img src="images/Line and circle content.png" alt="" class="w-full h-[1000px] mb-[-100px]">
+  </div>
+
+  <div class="space-y-20 w-full md:w-auto">
+    <img src="images/img2.png" alt="" class="w-full md:w-auto">
+    <div class="items-end p-4 space-y-5">
+      <p class="text-base text-red-500">About Us</p>
+      <h3 class="text-4xl font-semibold">Our Vision</h3>
+      <p class="text-xl max-w-full md:w-[500px]">
+        To have a globally recognised strategic bridge between education and the job market
+      </p>
+      <a href="#" class="inline-block border border-red-500 text-red-500 px-4 py-2 rounded-full text-lg hover:bg-red-500 hover:text-white transition">
+        Contact us →
+      </a>
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Discover, Interact, Engage Section -->
+<section class="bg-white py-16 px-6 md:px-16 mt-10">
+  <div class="flex justify-between mx-auto max-w-6xl space-x-6">
+
+    <!-- Card 1 -->
+    <div class="relative w-full max-w-sm text-center">
+      <!-- Background number -->
+      <img src="images/1.png" alt="1" class="absolute top-0 left-1/2 -translate-x-1/2 opacity-10 w-48 -z-10 select-none">
+      <div class="flex flex-col items-center space-y-4">
+        <img src="images/bulb.png" alt="Bulb Icon" class="h-6">
+        <h3 class="font-semibold text-lg text-black">Discover</h3>
+        <p class="text-sm text-gray-500">
+          We uncover students unique skills to stand out in a crowded job market
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="relative w-full max-w-sm text-center">
+      <img src="images/2.png" alt="2" class="absolute top-0 left-1/2 -translate-x-1/2 opacity-10 w-48 -z-10 select-none">
+      <div class="flex flex-col items-center space-y-4">
+        <img src="images/pen.png" alt="Pen Icon" class="h-6">
+        <h3 class="font-semibold text-lg text-black">Interact</h3>
+        <p class="text-sm text-gray-500">
+          We open doors to new opportunities by expanding your transferrable skills
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="relative w-full max-w-sm text-center">
+      <img src="images/3.png" alt="3" class="absolute top-0 left-1/2 -translate-x-1/2 opacity-10 w-48 -z-10 select-none">
+      <div class="flex flex-col items-center space-y-4">
+        <img src="images/paper.png" alt="Paper Icon" class="h-6">
+        <h3 class="font-semibold text-lg text-black">Engage</h3>
+        <p class="text-sm text-gray-500">
+          To foster a skill focussed environment that enable students to navigate their ideal career
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="bg-[#1C1C32] text-white py-12 px-6 md:px-16">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <!-- Brand -->
+    <div>
+      <div class="flex items-center gap-2 mb-4">
+        <span class="text-lg font-bold">CREATIVES <span class="text-red-500">FOR YOU</span></span>
+      </div>
+      <p class="text-sm text-gray-300">
+        Building a bridge between education and opportunity.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="text-base font-semibold mb-3">Quick Links</h4>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><a href="#" class="hover:text-red-400">Home</a></li>
+        <li><a href="#" class="hover:text-red-400">About</a></li>
+        <li><a href="#" class="hover:text-red-400">Upskill</a></li>
+        <li><a href="#" class="hover:text-red-400">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h4 class="text-base font-semibold mb-3">Contact Us</h4>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><i class="fas fa-envelope mr-2"></i> hello@c4u.com</li>
+        <li><i class="fas fa-phone mr-2"></i> +880 123 456 789</li>
+        <li><i class="fas fa-map-marker-alt mr-2"></i> Dhaka, Bangladesh</li>
+      </ul>
+    </div>
+
+    <!-- Socials -->
+    <div>
+      <h4 class="text-base font-semibold mb-3">Follow Us</h4>
+      <div class="flex gap-4 text-xl text-gray-300">
+        <a href="#" class="hover:text-red-400"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-red-400"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-red-400"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="hover:text-red-400"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer bottom -->
+  <div class="mt-10 text-center text-sm text-gray-400">
+    &copy; 2025 Creatives For You. All rights reserved.
+  </div>
+</footer>
+
+
+
+
+
+</body>
+</html>
+
